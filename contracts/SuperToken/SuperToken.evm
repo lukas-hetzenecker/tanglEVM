@@ -1,0 +1,2994 @@
+    /* "SuperToken.sol":166:355  contract SuperToken is ERC20, ERC20Detailed {... */
+  mstore(0x40, 0x80)
+    /* "SuperToken.sol":215:352  constructor () ... */
+  callvalue
+    /* "--CODEGEN--":8:17   */
+  dup1
+    /* "--CODEGEN--":5:7   */
+  iszero
+  tag_1
+  jumpi
+    /* "--CODEGEN--":30:31   */
+  0x00
+    /* "--CODEGEN--":27:28   */
+  dup1
+    /* "--CODEGEN--":20:32   */
+  revert
+    /* "--CODEGEN--":5:7   */
+tag_1:
+    /* "SuperToken.sol":215:352  constructor () ... */
+  pop
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":416:579  constructor (string memory name, string memory symbol, uint8 decimals) public {... */
+  mload(0x40)
+  dup1
+  0x40
+  add
+  0x40
+  mstore
+  dup1
+  0x0a
+  dup2
+  mstore
+  0x20
+  add
+  0x5375706572546f6b656e00000000000000000000000000000000000000000000
+  dup2
+  mstore
+  pop
+  mload(0x40)
+  dup1
+  0x40
+  add
+  0x40
+  mstore
+  dup1
+  0x03
+  dup2
+  mstore
+  0x20
+  add
+  0x5355500000000000000000000000000000000000000000000000000000000000
+  dup2
+  mstore
+  pop
+    /* "SuperToken.sol":270:272  18 */
+  0x12
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":512:516  name */
+  dup3
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":504:509  _name */
+  0x03
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":504:516  _name = name */
+  swap1
+  dup1
+  mload
+  swap1
+  0x20
+  add
+  swap1
+  tag_7
+  swap3
+  swap2
+  swap1
+  tag_8
+  jump	// in
+tag_7:
+  pop
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":536:542  symbol */
+  dup2
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":526:533  _symbol */
+  0x04
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":526:542  _symbol = symbol */
+  swap1
+  dup1
+  mload
+  swap1
+  0x20
+  add
+  swap1
+  tag_9
+  swap3
+  swap2
+  swap1
+  tag_8
+  jump	// in
+tag_9:
+  pop
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":564:572  decimals */
+  dup1
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":552:561  _decimals */
+  0x05
+  0x00
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":552:572  _decimals = decimals */
+  0x0100
+  exp
+  dup2
+  sload
+  dup2
+  0xff
+  mul
+  not
+  and
+  swap1
+  dup4
+  0xff
+  and
+  mul
+  or
+  swap1
+  sstore
+  pop
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":416:579  constructor (string memory name, string memory symbol, uint8 decimals) public {... */
+  pop
+  pop
+  pop
+    /* "SuperToken.sol":293:347  _mint(msg.sender, 10000 * (10 ** uint256(decimals()))) */
+  tag_11
+    /* "SuperToken.sol":299:309  msg.sender */
+  caller
+    /* "SuperToken.sol":334:344  decimals() */
+  tag_12
+    /* "SuperToken.sol":334:342  decimals */
+  shl(0x20, tag_13)
+    /* "SuperToken.sol":334:344  decimals() */
+  0x20
+  shr
+  jump	// in
+tag_12:
+    /* "SuperToken.sol":326:345  uint256(decimals()) */
+  0xff
+  and
+    /* "SuperToken.sol":320:322  10 */
+  0x0a
+    /* "SuperToken.sol":320:345  10 ** uint256(decimals()) */
+  exp
+    /* "SuperToken.sol":311:316  10000 */
+  0x2710
+    /* "SuperToken.sol":311:346  10000 * (10 ** uint256(decimals())) */
+  mul
+    /* "SuperToken.sol":293:298  _mint */
+  shl(0x20, tag_14)
+    /* "SuperToken.sol":293:347  _mint(msg.sender, 10000 * (10 ** uint256(decimals()))) */
+  0x20
+  shr
+  jump	// in
+tag_11:
+    /* "SuperToken.sol":166:355  contract SuperToken is ERC20, ERC20Detailed {... */
+  jump(tag_15)
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1472:1553  function decimals() public view returns (uint8) {... */
+tag_13:
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1513:1518  uint8 */
+  0x00
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1537:1546  _decimals */
+  0x05
+  0x00
+  swap1
+  sload
+  swap1
+  0x0100
+  exp
+  swap1
+  div
+  0xff
+  and
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1530:1546  return _decimals */
+  swap1
+  pop
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1472:1553  function decimals() public view returns (uint8) {... */
+  swap1
+  jump	// out
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5959:6261  function _mint(address account, uint256 amount) internal {... */
+tag_14:
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6053:6054  0 */
+  0x00
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6034:6055  account != address(0) */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6034:6041  account */
+  dup3
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6034:6055  account != address(0) */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  eq
+  iszero
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6026:6091  require(account != address(0), "ERC20: mint to the zero address") */
+  tag_18
+  jumpi
+  mload(0x40)
+  0x08c379a000000000000000000000000000000000000000000000000000000000
+  dup2
+  mstore
+  0x04
+  add
+  dup1
+  dup1
+  0x20
+  add
+  dup3
+  dup2
+  sub
+  dup3
+  mstore
+  0x1f
+  dup2
+  mstore
+  0x20
+  add
+  dup1
+  0x45524332303a206d696e7420746f20746865207a65726f206164647265737300
+  dup2
+  mstore
+  pop
+  0x20
+  add
+  swap2
+  pop
+  pop
+  mload(0x40)
+  dup1
+  swap2
+  sub
+  swap1
+  revert
+tag_18:
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6117:6141  _totalSupply.add(amount) */
+  tag_19
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6134:6140  amount */
+  dup2
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6117:6129  _totalSupply */
+  sload(0x02)
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6117:6133  _totalSupply.add */
+  or(tag_0_76, shl(0x20, tag_20))
+  swap1
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6117:6141  _totalSupply.add(amount) */
+  swap2
+  swap1
+  0x20
+  shr
+  jump	// in
+tag_19:
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6102:6114  _totalSupply */
+  0x02
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6102:6141  _totalSupply = _totalSupply.add(amount) */
+  dup2
+  swap1
+  sstore
+  pop
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6172:6202  _balances[account].add(amount) */
+  tag_21
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6195:6201  amount */
+  dup2
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6172:6181  _balances */
+  0x00
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6172:6190  _balances[account] */
+  dup1
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6182:6189  account */
+  dup6
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6172:6190  _balances[account] */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  dup2
+  mstore
+  0x20
+  add
+  swap1
+  dup2
+  mstore
+  0x20
+  add
+  0x00
+  keccak256
+  sload
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6172:6194  _balances[account].add */
+  or(tag_0_76, shl(0x20, tag_20))
+  swap1
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6172:6202  _balances[account].add(amount) */
+  swap2
+  swap1
+  0x20
+  shr
+  jump	// in
+tag_21:
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6151:6160  _balances */
+  0x00
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6151:6169  _balances[account] */
+  dup1
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6161:6168  account */
+  dup5
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6151:6169  _balances[account] */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  dup2
+  mstore
+  0x20
+  add
+  swap1
+  dup2
+  mstore
+  0x20
+  add
+  0x00
+  keccak256
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6151:6202  _balances[account] = _balances[account].add(amount) */
+  dup2
+  swap1
+  sstore
+  pop
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6238:6245  account */
+  dup2
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6217:6254  Transfer(address(0), account, amount) */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6234:6235  0 */
+  0x00
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6217:6254  Transfer(address(0), account, amount) */
+  0xffffffffffffffffffffffffffffffffffffffff
+  and
+  0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6247:6253  amount */
+  dup4
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":6217:6254  Transfer(address(0), account, amount) */
+  mload(0x40)
+  dup1
+  dup3
+  dup2
+  mstore
+  0x20
+  add
+  swap2
+  pop
+  pop
+  mload(0x40)
+  dup1
+  swap2
+  sub
+  swap1
+  log3
+    /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5959:6261  function _mint(address account, uint256 amount) internal {... */
+  pop
+  pop
+  jump	// out
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":834:1010  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+tag_20:
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":892:899  uint256 */
+  0x00
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":911:920  uint256 c */
+  dup1
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":927:928  b */
+  dup3
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":923:924  a */
+  dup5
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":923:928  a + b */
+  add
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":911:928  uint256 c = a + b */
+  swap1
+  pop
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":951:952  a */
+  dup4
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":946:947  c */
+  dup2
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":946:952  c >= a */
+  lt
+  iszero
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":938:984  require(c >= a, "SafeMath: addition overflow") */
+  tag_23
+  jumpi
+  mload(0x40)
+  0x08c379a000000000000000000000000000000000000000000000000000000000
+  dup2
+  mstore
+  0x04
+  add
+  dup1
+  dup1
+  0x20
+  add
+  dup3
+  dup2
+  sub
+  dup3
+  mstore
+  0x1b
+  dup2
+  mstore
+  0x20
+  add
+  dup1
+  0x536166654d6174683a206164646974696f6e206f766572666c6f770000000000
+  dup2
+  mstore
+  pop
+  0x20
+  add
+  swap2
+  pop
+  pop
+  mload(0x40)
+  dup1
+  swap2
+  sub
+  swap1
+  revert
+tag_23:
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1002:1003  c */
+  dup1
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":995:1003  return c */
+  swap2
+  pop
+  pop
+    /* "openzeppelin-solidity/contracts/math/SafeMath.sol":834:1010  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+  swap3
+  swap2
+  pop
+  pop
+  jump	// out
+    /* "SuperToken.sol":166:355  contract SuperToken is ERC20, ERC20Detailed {... */
+tag_8:
+  dup3
+  dup1
+  sload
+  0x01
+  dup2
+  0x01
+  and
+  iszero
+  0x0100
+  mul
+  sub
+  and
+  0x02
+  swap1
+  div
+  swap1
+  0x00
+  mstore
+  keccak256(0x00, 0x20)
+  swap1
+  0x1f
+  add
+  0x20
+  swap1
+  div
+  dup2
+  add
+  swap3
+  dup3
+  0x1f
+  lt
+  tag_25
+  jumpi
+  dup1
+  mload
+  not(0xff)
+  and
+  dup4
+  dup1
+  add
+  or
+  dup6
+  sstore
+  jump(tag_24)
+tag_25:
+  dup3
+  dup1
+  add
+  0x01
+  add
+  dup6
+  sstore
+  dup3
+  iszero
+  tag_24
+  jumpi
+  swap2
+  dup3
+  add
+tag_26:
+  dup3
+  dup2
+  gt
+  iszero
+  tag_27
+  jumpi
+  dup3
+  mload
+  dup3
+  sstore
+  swap2
+  0x20
+  add
+  swap2
+  swap1
+  0x01
+  add
+  swap1
+  jump(tag_26)
+tag_27:
+tag_24:
+  pop
+  swap1
+  pop
+  tag_28
+  swap2
+  swap1
+  tag_29
+  jump	// in
+tag_28:
+  pop
+  swap1
+  jump	// out
+tag_29:
+  tag_30
+  swap2
+  swap1
+tag_31:
+  dup1
+  dup3
+  gt
+  iszero
+  tag_32
+  jumpi
+  0x00
+  dup2
+  0x00
+  swap1
+  sstore
+  pop
+  0x01
+  add
+  jump(tag_31)
+tag_32:
+  pop
+  swap1
+  jump
+tag_30:
+  swap1
+  jump	// out
+tag_15:
+  dataSize(sub_0)
+  dup1
+  dataOffset(sub_0)
+  0x00
+  codecopy
+  0x00
+  return
+stop
+
+sub_0: assembly {
+        /* "SuperToken.sol":166:355  contract SuperToken is ERC20, ERC20Detailed {... */
+      mstore(0x40, 0x80)
+      callvalue
+        /* "--CODEGEN--":8:17   */
+      dup1
+        /* "--CODEGEN--":5:7   */
+      iszero
+      tag_1
+      jumpi
+        /* "--CODEGEN--":30:31   */
+      0x00
+        /* "--CODEGEN--":27:28   */
+      dup1
+        /* "--CODEGEN--":20:32   */
+      revert
+        /* "--CODEGEN--":5:7   */
+    tag_1:
+        /* "SuperToken.sol":166:355  contract SuperToken is ERC20, ERC20Detailed {... */
+      pop
+      jumpi(tag_2, lt(calldatasize, 0x04))
+      shr(0xe0, calldataload(0x00))
+      dup1
+      0x39509351
+      gt
+      tag_14
+      jumpi
+      dup1
+      0x39509351
+      eq
+      tag_8
+      jumpi
+      dup1
+      0x70a08231
+      eq
+      tag_9
+      jumpi
+      dup1
+      0x95d89b41
+      eq
+      tag_10
+      jumpi
+      dup1
+      0xa457c2d7
+      eq
+      tag_11
+      jumpi
+      dup1
+      0xa9059cbb
+      eq
+      tag_12
+      jumpi
+      dup1
+      0xdd62ed3e
+      eq
+      tag_13
+      jumpi
+      jump(tag_2)
+    tag_14:
+      dup1
+      0x06fdde03
+      eq
+      tag_3
+      jumpi
+      dup1
+      0x095ea7b3
+      eq
+      tag_4
+      jumpi
+      dup1
+      0x18160ddd
+      eq
+      tag_5
+      jumpi
+      dup1
+      0x23b872dd
+      eq
+      tag_6
+      jumpi
+      dup1
+      0x313ce567
+      eq
+      tag_7
+      jumpi
+    tag_2:
+      0x00
+      dup1
+      revert
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":644:725  function name() public view returns (string memory) {... */
+    tag_3:
+      tag_15
+      tag_16
+      jump	// in
+    tag_15:
+      mload(0x40)
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      dup4
+      dup2
+      dup2
+      mload
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_17:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_19
+      jumpi
+        /* "--CODEGEN--":99:100   */
+      dup1
+        /* "--CODEGEN--":94:97   */
+      dup3
+        /* "--CODEGEN--":90:101   */
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":80:81   */
+      dup2
+        /* "--CODEGEN--":75:78   */
+      dup5
+        /* "--CODEGEN--":71:82   */
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":49:50   */
+      dup2
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":40:55   */
+      swap1
+      pop
+        /* "--CODEGEN--":8:108   */
+      jump(tag_17)
+    tag_19:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":644:725  function name() public view returns (string memory) {... */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_20
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_20:
+      pop
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2500:2647  function approve(address spender, uint256 value) public returns (bool) {... */
+    tag_4:
+      tag_21
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_22
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_22:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2500:2647  function approve(address spender, uint256 value) public returns (bool) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      tag_23
+      jump	// in
+    tag_21:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1559:1648  function totalSupply() public view returns (uint256) {... */
+    tag_5:
+      tag_24
+      tag_25
+      jump	// in
+    tag_24:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3104:3404  function transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {... */
+    tag_6:
+      tag_26
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x60
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_27
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_27:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3104:3404  function transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      tag_28
+      jump	// in
+    tag_26:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1472:1553  function decimals() public view returns (uint8) {... */
+    tag_7:
+      tag_29
+      tag_30
+      jump	// in
+    tag_29:
+      mload(0x40)
+      dup1
+      dup3
+      0xff
+      and
+      0xff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3799:4006  function increaseAllowance(address spender, uint256 addedValue) public returns (bool) {... */
+    tag_8:
+      tag_31
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_32
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_32:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3799:4006  function increaseAllowance(address spender, uint256 addedValue) public returns (bool) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      tag_33
+      jump	// in
+    tag_31:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1706:1814  function balanceOf(address account) public view returns (uint256) {... */
+    tag_9:
+      tag_34
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x20
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_35
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_35:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1706:1814  function balanceOf(address account) public view returns (uint256) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      tag_36
+      jump	// in
+    tag_34:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":838:923  function symbol() public view returns (string memory) {... */
+    tag_10:
+      tag_37
+      tag_38
+      jump	// in
+    tag_37:
+      mload(0x40)
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      dup4
+      dup2
+      dup2
+      mload
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_39:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_41
+      jumpi
+        /* "--CODEGEN--":99:100   */
+      dup1
+        /* "--CODEGEN--":94:97   */
+      dup3
+        /* "--CODEGEN--":90:101   */
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":80:81   */
+      dup2
+        /* "--CODEGEN--":75:78   */
+      dup5
+        /* "--CODEGEN--":71:82   */
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":49:50   */
+      dup2
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":40:55   */
+      swap1
+      pop
+        /* "--CODEGEN--":8:108   */
+      jump(tag_39)
+    tag_41:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":838:923  function symbol() public view returns (string memory) {... */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_42
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_42:
+      pop
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4493:4751  function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool) {... */
+    tag_11:
+      tag_43
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_44
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_44:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4493:4751  function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      tag_45
+      jump	// in
+    tag_43:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2017:2172  function transfer(address recipient, uint256 amount) public returns (bool) {... */
+    tag_12:
+      tag_46
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_47
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_47:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2017:2172  function transfer(address recipient, uint256 amount) public returns (bool) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      tag_48
+      jump	// in
+    tag_46:
+      mload(0x40)
+      dup1
+      dup3
+      iszero
+      iszero
+      iszero
+      iszero
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2230:2362  function allowance(address owner, address spender) public view returns (uint256) {... */
+    tag_13:
+      tag_49
+      0x04
+      dup1
+      calldatasize
+      sub
+        /* "--CODEGEN--":13:15   */
+      0x40
+        /* "--CODEGEN--":8:11   */
+      dup2
+        /* "--CODEGEN--":5:16   */
+      lt
+        /* "--CODEGEN--":2:4   */
+      iszero
+      tag_50
+      jumpi
+        /* "--CODEGEN--":29:30   */
+      0x00
+        /* "--CODEGEN--":26:27   */
+      dup1
+        /* "--CODEGEN--":19:31   */
+      revert
+        /* "--CODEGEN--":2:4   */
+    tag_50:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2230:2362  function allowance(address owner, address spender) public view returns (uint256) {... */
+      dup2
+      add
+      swap1
+      dup1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      dup1
+      calldataload
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      swap1
+      0x20
+      add
+      swap1
+      swap3
+      swap2
+      swap1
+      pop
+      pop
+      pop
+      tag_51
+      jump	// in
+    tag_49:
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      return
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":644:725  function name() public view returns (string memory) {... */
+    tag_16:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":681:694  string memory */
+      0x60
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":713:718  _name */
+      0x03
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":706:718  return _name */
+      dup1
+      sload
+      0x01
+      dup2
+      0x01
+      and
+      iszero
+      0x0100
+      mul
+      sub
+      and
+      0x02
+      swap1
+      div
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup3
+      dup1
+      sload
+      0x01
+      dup2
+      0x01
+      and
+      iszero
+      0x0100
+      mul
+      sub
+      and
+      0x02
+      swap1
+      div
+      dup1
+      iszero
+      tag_53
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_54
+      jumpi
+      0x0100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_53)
+    tag_54:
+      dup3
+      add
+      swap2
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+    tag_55:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x01
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_55
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_53:
+      pop
+      pop
+      pop
+      pop
+      pop
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":644:725  function name() public view returns (string memory) {... */
+      swap1
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2500:2647  function approve(address spender, uint256 value) public returns (bool) {... */
+    tag_23:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2565:2569  bool */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2581:2619  _approve(_msgSender(), spender, value) */
+      tag_57
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2590:2602  _msgSender() */
+      tag_58
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2590:2600  _msgSender */
+      tag_59
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2590:2602  _msgSender() */
+      jump	// in
+    tag_58:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2604:2611  spender */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2613:2618  value */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2581:2589  _approve */
+      tag_60
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2581:2619  _approve(_msgSender(), spender, value) */
+      jump	// in
+    tag_57:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2636:2640  true */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2629:2640  return true */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2500:2647  function approve(address spender, uint256 value) public returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1559:1648  function totalSupply() public view returns (uint256) {... */
+    tag_25:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1603:1610  uint256 */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1629:1641  _totalSupply */
+      sload(0x02)
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1622:1641  return _totalSupply */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1559:1648  function totalSupply() public view returns (uint256) {... */
+      swap1
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3104:3404  function transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {... */
+    tag_28:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3193:3197  bool */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3209:3245  _transfer(sender, recipient, amount) */
+      tag_63
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3219:3225  sender */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3227:3236  recipient */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3238:3244  amount */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3209:3218  _transfer */
+      tag_64
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3209:3245  _transfer(sender, recipient, amount) */
+      jump	// in
+    tag_63:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3255:3376  _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance")) */
+      tag_65
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3264:3270  sender */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3272:3284  _msgSender() */
+      tag_66
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3272:3282  _msgSender */
+      tag_59
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3272:3284  _msgSender() */
+      jump	// in
+    tag_66:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3375  _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance") */
+      tag_67
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3324:3330  amount */
+      dup6
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3375  _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance") */
+      mload(0x40)
+      dup1
+      0x60
+      add
+      0x40
+      mstore
+      dup1
+      0x28
+      dup2
+      mstore
+      0x20
+      add
+      data_974d1b4421da69cc60b481194f0dad36a5bb4e23da810da7a7fb30cdba178330
+      0x28
+      swap2
+      codecopy
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3297  _allowances */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3305  _allowances[sender] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3298:3304  sender */
+      dup12
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3305  _allowances[sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3319  _allowances[sender][_msgSender()] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3306:3318  _msgSender() */
+      tag_68
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3306:3316  _msgSender */
+      tag_59
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3306:3318  _msgSender() */
+      jump	// in
+    tag_68:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3319  _allowances[sender][_msgSender()] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3323  _allowances[sender][_msgSender()].sub */
+      tag_69
+      swap1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3286:3375  _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance") */
+      swap3
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_67:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3255:3263  _approve */
+      tag_60
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3255:3376  _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance")) */
+      jump	// in
+    tag_65:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3393:3397  true */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3386:3397  return true */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3104:3404  function transferFrom(address sender, address recipient, uint256 amount) public returns (bool) {... */
+      swap4
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1472:1553  function decimals() public view returns (uint8) {... */
+    tag_30:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1513:1518  uint8 */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1537:1546  _decimals */
+      0x05
+      0x00
+      swap1
+      sload
+      swap1
+      0x0100
+      exp
+      swap1
+      div
+      0xff
+      and
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1530:1546  return _decimals */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":1472:1553  function decimals() public view returns (uint8) {... */
+      swap1
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3799:4006  function increaseAllowance(address spender, uint256 addedValue) public returns (bool) {... */
+    tag_33:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3879:3883  bool */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3895:3978  _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue)) */
+      tag_72
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3904:3916  _msgSender() */
+      tag_73
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3904:3914  _msgSender */
+      tag_59
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3904:3916  _msgSender() */
+      jump	// in
+    tag_73:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3918:3925  spender */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3927:3977  _allowances[_msgSender()][spender].add(addedValue) */
+      tag_74
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3966:3976  addedValue */
+      dup6
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3927:3938  _allowances */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3927:3952  _allowances[_msgSender()] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3939:3951  _msgSender() */
+      tag_75
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3939:3949  _msgSender */
+      tag_59
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3939:3951  _msgSender() */
+      jump	// in
+    tag_75:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3927:3952  _allowances[_msgSender()] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3927:3961  _allowances[_msgSender()][spender] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3953:3960  spender */
+      dup10
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3927:3961  _allowances[_msgSender()][spender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3927:3965  _allowances[_msgSender()][spender].add */
+      tag_76
+      swap1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3927:3977  _allowances[_msgSender()][spender].add(addedValue) */
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_74:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3895:3903  _approve */
+      tag_60
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3895:3978  _approve(_msgSender(), spender, _allowances[_msgSender()][spender].add(addedValue)) */
+      jump	// in
+    tag_72:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3995:3999  true */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3988:3999  return true */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":3799:4006  function increaseAllowance(address spender, uint256 addedValue) public returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1706:1814  function balanceOf(address account) public view returns (uint256) {... */
+    tag_36:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1763:1770  uint256 */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1789:1798  _balances */
+      dup1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1789:1807  _balances[account] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1799:1806  account */
+      dup4
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1789:1807  _balances[account] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1782:1807  return _balances[account] */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":1706:1814  function balanceOf(address account) public view returns (uint256) {... */
+      swap2
+      swap1
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":838:923  function symbol() public view returns (string memory) {... */
+    tag_38:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":877:890  string memory */
+      0x60
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":909:916  _symbol */
+      0x04
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":902:916  return _symbol */
+      dup1
+      sload
+      0x01
+      dup2
+      0x01
+      and
+      iszero
+      0x0100
+      mul
+      sub
+      and
+      0x02
+      swap1
+      div
+      dup1
+      0x1f
+      add
+      0x20
+      dup1
+      swap2
+      div
+      mul
+      0x20
+      add
+      mload(0x40)
+      swap1
+      dup2
+      add
+      0x40
+      mstore
+      dup1
+      swap3
+      swap2
+      swap1
+      dup2
+      dup2
+      mstore
+      0x20
+      add
+      dup3
+      dup1
+      sload
+      0x01
+      dup2
+      0x01
+      and
+      iszero
+      0x0100
+      mul
+      sub
+      and
+      0x02
+      swap1
+      div
+      dup1
+      iszero
+      tag_79
+      jumpi
+      dup1
+      0x1f
+      lt
+      tag_80
+      jumpi
+      0x0100
+      dup1
+      dup4
+      sload
+      div
+      mul
+      dup4
+      mstore
+      swap2
+      0x20
+      add
+      swap2
+      jump(tag_79)
+    tag_80:
+      dup3
+      add
+      swap2
+      swap1
+      0x00
+      mstore
+      keccak256(0x00, 0x20)
+      swap1
+    tag_81:
+      dup2
+      sload
+      dup2
+      mstore
+      swap1
+      0x01
+      add
+      swap1
+      0x20
+      add
+      dup1
+      dup4
+      gt
+      tag_81
+      jumpi
+      dup3
+      swap1
+      sub
+      0x1f
+      and
+      dup3
+      add
+      swap2
+    tag_79:
+      pop
+      pop
+      pop
+      pop
+      pop
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol":838:923  function symbol() public view returns (string memory) {... */
+      swap1
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4493:4751  function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool) {... */
+    tag_45:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4578:4582  bool */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4594:4723  _approve(_msgSender(), spender, _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero")) */
+      tag_83
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4603:4615  _msgSender() */
+      tag_84
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4603:4613  _msgSender */
+      tag_59
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4603:4615  _msgSender() */
+      jump	// in
+    tag_84:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4617:4624  spender */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4722  _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero") */
+      tag_85
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4665:4680  subtractedValue */
+      dup6
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4722  _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero") */
+      mload(0x40)
+      dup1
+      0x60
+      add
+      0x40
+      mstore
+      dup1
+      0x25
+      dup2
+      mstore
+      0x20
+      add
+      data_f8b476f7d28209d77d4a4ac1fe36b9f8259aa1bb6bddfa6e89de7e51615cf8a8
+      0x25
+      swap2
+      codecopy
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4637  _allowances */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4651  _allowances[_msgSender()] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4638:4650  _msgSender() */
+      tag_86
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4638:4648  _msgSender */
+      tag_59
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4638:4650  _msgSender() */
+      jump	// in
+    tag_86:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4651  _allowances[_msgSender()] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4660  _allowances[_msgSender()][spender] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4652:4659  spender */
+      dup11
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4660  _allowances[_msgSender()][spender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4664  _allowances[_msgSender()][spender].sub */
+      tag_69
+      swap1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4626:4722  _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero") */
+      swap3
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_85:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4594:4602  _approve */
+      tag_60
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4594:4723  _approve(_msgSender(), spender, _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero")) */
+      jump	// in
+    tag_83:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4740:4744  true */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4733:4744  return true */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":4493:4751  function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2017:2172  function transfer(address recipient, uint256 amount) public returns (bool) {... */
+    tag_48:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2086:2090  bool */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2102:2144  _transfer(_msgSender(), recipient, amount) */
+      tag_88
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2112:2124  _msgSender() */
+      tag_89
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2112:2122  _msgSender */
+      tag_59
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2112:2124  _msgSender() */
+      jump	// in
+    tag_89:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2126:2135  recipient */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2137:2143  amount */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2102:2111  _transfer */
+      tag_64
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2102:2144  _transfer(_msgSender(), recipient, amount) */
+      jump	// in
+    tag_88:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2161:2165  true */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2154:2165  return true */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2017:2172  function transfer(address recipient, uint256 amount) public returns (bool) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2230:2362  function allowance(address owner, address spender) public view returns (uint256) {... */
+    tag_51:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2302:2309  uint256 */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2328:2339  _allowances */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2328:2346  _allowances[owner] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2340:2345  owner */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2328:2346  _allowances[owner] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2328:2355  _allowances[owner][spender] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2347:2354  spender */
+      dup4
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2328:2355  _allowances[owner][spender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2321:2355  return _allowances[owner][spender] */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":2230:2362  function allowance(address owner, address spender) public view returns (uint256) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/GSN/Context.sol":791:879  function _msgSender() internal view returns (address) {... */
+    tag_59:
+        /* "openzeppelin-solidity/contracts/GSN/Context.sol":836:843  address */
+      0x00
+        /* "openzeppelin-solidity/contracts/GSN/Context.sol":862:872  msg.sender */
+      caller
+        /* "openzeppelin-solidity/contracts/GSN/Context.sol":855:872  return msg.sender */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/GSN/Context.sol":791:879  function _msgSender() internal view returns (address) {... */
+      swap1
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7344:7673  function _approve(address owner, address spender, uint256 value) internal {... */
+    tag_60:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7453:7454  0 */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7436:7455  owner != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7436:7441  owner */
+      dup4
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7436:7455  owner != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7428:7496  require(owner != address(0), "ERC20: approve from the zero address") */
+      tag_93
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      0x24
+      dup2
+      mstore
+      0x20
+      add
+      dup1
+      data_c953f4879035ed60e766b34720f656aab5c697b141d924c283124ecedb91c208
+      0x24
+      swap2
+      codecopy
+      0x40
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_93:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7533:7534  0 */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7514:7535  spender != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7514:7521  spender */
+      dup3
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7514:7535  spender != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7506:7574  require(spender != address(0), "ERC20: approve to the zero address") */
+      tag_94
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      0x22
+      dup2
+      mstore
+      0x20
+      add
+      dup1
+      data_24883cc5fe64ace9d0df1893501ecb93c77180f0ff69cca79affb3c316dc8029
+      0x22
+      swap2
+      codecopy
+      0x40
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_94:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7615:7620  value */
+      dup1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7585:7596  _allowances */
+      0x01
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7585:7603  _allowances[owner] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7597:7602  owner */
+      dup6
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7585:7603  _allowances[owner] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7585:7612  _allowances[owner][spender] */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7604:7611  spender */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7585:7612  _allowances[owner][spender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7585:7620  _allowances[owner][spender] = value */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7651:7658  spender */
+      dup2
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7635:7666  Approval(owner, spender, value) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7644:7649  owner */
+      dup4
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7635:7666  Approval(owner, spender, value) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7660:7665  value */
+      dup4
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7635:7666  Approval(owner, spender, value) */
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":7344:7673  function _approve(address owner, address spender, uint256 value) internal {... */
+      pop
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5225:5689  function _transfer(address sender, address recipient, uint256 amount) internal {... */
+    tag_64:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5340:5341  0 */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5322:5342  sender != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5322:5328  sender */
+      dup4
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5322:5342  sender != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5314:5384  require(sender != address(0), "ERC20: transfer from the zero address") */
+      tag_96
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      0x25
+      dup2
+      mstore
+      0x20
+      add
+      dup1
+      data_baecc556b46f4ed0f2b4cb599d60785ac8563dd2dc0a5bf12edea1c39e5e1fea
+      0x25
+      swap2
+      codecopy
+      0x40
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_96:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5423:5424  0 */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5402:5425  recipient != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5402:5411  recipient */
+      dup3
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5402:5425  recipient != address(0) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      eq
+      iszero
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5394:5465  require(recipient != address(0), "ERC20: transfer to the zero address") */
+      tag_97
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      0x23
+      dup2
+      mstore
+      0x20
+      add
+      dup1
+      data_0557e210f7a69a685100a7e4e3d0a7024c546085cee28910fd17d0b081d9516f
+      0x23
+      swap2
+      codecopy
+      0x40
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_97:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5496:5567  _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance") */
+      tag_98
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5518:5524  amount */
+      dup2
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5496:5567  _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance") */
+      mload(0x40)
+      dup1
+      0x60
+      add
+      0x40
+      mstore
+      dup1
+      0x26
+      dup2
+      mstore
+      0x20
+      add
+      data_4107e8a8b9e94bf8ff83080ddec1c0bffe897ebc2241b89d44f66b3d274088b6
+      0x26
+      swap2
+      codecopy
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5496:5505  _balances */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5496:5513  _balances[sender] */
+      dup1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5506:5512  sender */
+      dup8
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5496:5513  _balances[sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5496:5517  _balances[sender].sub */
+      tag_69
+      swap1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5496:5567  _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance") */
+      swap3
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_98:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5476:5485  _balances */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5476:5493  _balances[sender] */
+      dup1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5486:5492  sender */
+      dup6
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5476:5493  _balances[sender] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5476:5567  _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance") */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5600:5632  _balances[recipient].add(amount) */
+      tag_99
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5625:5631  amount */
+      dup2
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5600:5609  _balances */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5600:5620  _balances[recipient] */
+      dup1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5610:5619  recipient */
+      dup6
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5600:5620  _balances[recipient] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+      sload
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5600:5624  _balances[recipient].add */
+      tag_76
+      swap1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5600:5632  _balances[recipient].add(amount) */
+      swap2
+      swap1
+      0xffffffff
+      and
+      jump	// in
+    tag_99:
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5577:5586  _balances */
+      0x00
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5577:5597  _balances[recipient] */
+      dup1
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5587:5596  recipient */
+      dup5
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5577:5597  _balances[recipient] */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap1
+      dup2
+      mstore
+      0x20
+      add
+      0x00
+      keccak256
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5577:5632  _balances[recipient] = _balances[recipient].add(amount) */
+      dup2
+      swap1
+      sstore
+      pop
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5664:5673  recipient */
+      dup2
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5647:5682  Transfer(sender, recipient, amount) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5656:5662  sender */
+      dup4
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5647:5682  Transfer(sender, recipient, amount) */
+      0xffffffffffffffffffffffffffffffffffffffff
+      and
+      0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5675:5681  amount */
+      dup4
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5647:5682  Transfer(sender, recipient, amount) */
+      mload(0x40)
+      dup1
+      dup3
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      log3
+        /* "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol":5225:5689  function _transfer(address sender, address recipient, uint256 amount) internal {... */
+      pop
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1692:1879  function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {... */
+    tag_69:
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1778:1785  uint256 */
+      0x00
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1810:1811  a */
+      dup4
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1805:1806  b */
+      dup4
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1805:1811  b <= a */
+      gt
+      iszero
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1813:1825  errorMessage */
+      dup3
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1797:1826  require(b <= a, errorMessage) */
+      swap1
+      tag_101
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      dup4
+      dup2
+      dup2
+      mload
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+      dup1
+      mload
+      swap1
+      0x20
+      add
+      swap1
+      dup1
+      dup4
+      dup4
+        /* "--CODEGEN--":23:24   */
+      0x00
+        /* "--CODEGEN--":8:108   */
+    tag_102:
+        /* "--CODEGEN--":33:36   */
+      dup4
+        /* "--CODEGEN--":30:31   */
+      dup2
+        /* "--CODEGEN--":27:37   */
+      lt
+        /* "--CODEGEN--":8:108   */
+      iszero
+      tag_104
+      jumpi
+        /* "--CODEGEN--":99:100   */
+      dup1
+        /* "--CODEGEN--":94:97   */
+      dup3
+        /* "--CODEGEN--":90:101   */
+      add
+        /* "--CODEGEN--":84:102   */
+      mload
+        /* "--CODEGEN--":80:81   */
+      dup2
+        /* "--CODEGEN--":75:78   */
+      dup5
+        /* "--CODEGEN--":71:82   */
+      add
+        /* "--CODEGEN--":64:103   */
+      mstore
+        /* "--CODEGEN--":52:54   */
+      0x20
+        /* "--CODEGEN--":49:50   */
+      dup2
+        /* "--CODEGEN--":45:55   */
+      add
+        /* "--CODEGEN--":40:55   */
+      swap1
+      pop
+        /* "--CODEGEN--":8:108   */
+      jump(tag_102)
+    tag_104:
+        /* "--CODEGEN--":12:26   */
+      pop
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1797:1826  require(b <= a, errorMessage) */
+      pop
+      pop
+      pop
+      swap1
+      pop
+      swap1
+      dup2
+      add
+      swap1
+      0x1f
+      and
+      dup1
+      iszero
+      tag_105
+      jumpi
+      dup1
+      dup3
+      sub
+      dup1
+      mload
+      0x01
+      dup4
+      0x20
+      sub
+      0x0100
+      exp
+      sub
+      not
+      and
+      dup2
+      mstore
+      0x20
+      add
+      swap2
+      pop
+    tag_105:
+      pop
+      swap3
+      pop
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_101:
+      pop
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1836:1845  uint256 c */
+      0x00
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1852:1853  b */
+      dup4
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1848:1849  a */
+      dup6
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1848:1853  a - b */
+      sub
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1836:1853  uint256 c = a - b */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1871:1872  c */
+      dup1
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1864:1872  return c */
+      swap2
+      pop
+      pop
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1692:1879  function sub(uint256 a, uint256 b, string memory errorMessage) internal pure returns (uint256) {... */
+      swap4
+      swap3
+      pop
+      pop
+      pop
+      jump	// out
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":834:1010  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+    tag_76:
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":892:899  uint256 */
+      0x00
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":911:920  uint256 c */
+      dup1
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":927:928  b */
+      dup3
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":923:924  a */
+      dup5
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":923:928  a + b */
+      add
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":911:928  uint256 c = a + b */
+      swap1
+      pop
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":951:952  a */
+      dup4
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":946:947  c */
+      dup2
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":946:952  c >= a */
+      lt
+      iszero
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":938:984  require(c >= a, "SafeMath: addition overflow") */
+      tag_107
+      jumpi
+      mload(0x40)
+      0x08c379a000000000000000000000000000000000000000000000000000000000
+      dup2
+      mstore
+      0x04
+      add
+      dup1
+      dup1
+      0x20
+      add
+      dup3
+      dup2
+      sub
+      dup3
+      mstore
+      0x1b
+      dup2
+      mstore
+      0x20
+      add
+      dup1
+      0x536166654d6174683a206164646974696f6e206f766572666c6f770000000000
+      dup2
+      mstore
+      pop
+      0x20
+      add
+      swap2
+      pop
+      pop
+      mload(0x40)
+      dup1
+      swap2
+      sub
+      swap1
+      revert
+    tag_107:
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":1002:1003  c */
+      dup1
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":995:1003  return c */
+      swap2
+      pop
+      pop
+        /* "openzeppelin-solidity/contracts/math/SafeMath.sol":834:1010  function add(uint256 a, uint256 b) internal pure returns (uint256) {... */
+      swap3
+      swap2
+      pop
+      pop
+      jump	// out
+    stop
+    data_0557e210f7a69a685100a7e4e3d0a7024c546085cee28910fd17d0b081d9516f 45524332303a207472616e7366657220746f20746865207a65726f2061646472657373
+    data_24883cc5fe64ace9d0df1893501ecb93c77180f0ff69cca79affb3c316dc8029 45524332303a20617070726f766520746f20746865207a65726f2061646472657373
+    data_4107e8a8b9e94bf8ff83080ddec1c0bffe897ebc2241b89d44f66b3d274088b6 45524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e6365
+    data_974d1b4421da69cc60b481194f0dad36a5bb4e23da810da7a7fb30cdba178330 45524332303a207472616e7366657220616d6f756e74206578636565647320616c6c6f77616e6365
+    data_baecc556b46f4ed0f2b4cb599d60785ac8563dd2dc0a5bf12edea1c39e5e1fea 45524332303a207472616e736665722066726f6d20746865207a65726f2061646472657373
+    data_c953f4879035ed60e766b34720f656aab5c697b141d924c283124ecedb91c208 45524332303a20617070726f76652066726f6d20746865207a65726f2061646472657373
+    data_f8b476f7d28209d77d4a4ac1fe36b9f8259aa1bb6bddfa6e89de7e51615cf8a8 45524332303a2064656372656173656420616c6c6f77616e63652062656c6f77207a65726f
+
+    auxdata: 0xa265627a7a723158207140adeaf727eaa2cdf739259e306ec58043c6fd18cb748324e51fd9666df68164736f6c634300050b0032
+}

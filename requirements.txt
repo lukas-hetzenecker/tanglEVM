@@ -1,0 +1,5 @@
+py-evm==0.3.0a1
+PyOTA==2.0.7
+PyOTA-CCurl==1.0.9
+pyzmq==18.1.1
+plyvel==1.1.0
